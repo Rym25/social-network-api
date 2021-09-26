@@ -26,4 +26,4 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 ## Demonstration
 
-Here is a link to a demonstration of the App using Insomnia: https://watch.screencastify.com/v/SrvFvviNlVg2r1VM82Xh
+Here is a link to a demonstration of the App using Insomnia: https://drive.google.com/file/d/12hbCNDKKLHrvedE-nZqe-o3NDIY9uHZE/view
