@@ -4,10 +4,12 @@ const userController = {
     // GET all users
     getAllUser(req, res) {
         User.find({})
-            .populate({
-                path: 'friends',
-                select: '-__v'
-            })
+            .populate(
+                {
+                    path: 'friends',
+                    select: '-__v'
+                }
+            )
             .select('-__v')
             .then(dbUserData => res.json(dbUserData))
             .catch(err => {
@@ -18,10 +20,12 @@ const userController = {
     // GET single user by _id 
     getUserById({ params }, res) {
         User.findOne({ _id: params.userId })
-            .populate({
-                path: 'friends',
-                select: '-__v'
-            })
+            .populate(
+                {
+                    path: 'friends',
+                    select: '-__v'
+                }
+            )
             .select('-__v')
             .then(dbUserData => {
                 if (!dbUserData) {
