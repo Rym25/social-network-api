@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 3001;
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(require('./routes'));
 
 // connect to mongo db
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/api', {
