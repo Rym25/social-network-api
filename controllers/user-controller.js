@@ -2,10 +2,22 @@ const { User, Thought } = require('../models');
 
 const userController = {
     // GET all users
+    getAllUser(req, res) {
+        User.find({})
+            .then(dbUserData => res.json(dbUserData))
+            .catch(err => {
+                console.log(err);
+                res.status(400).json(err);
+            })
+    },
+    // GET single user by _id 
 
-    // GET single user
-
-    // POST new user
+    // POST new user 
+    createUser({body}, res) {
+        User.create(body)
+            .then(dbUserData => res.json(dbUserData))
+            .catch(err => res.status(400).json(err));
+    },
 
     // PUT to update user by _id
 
