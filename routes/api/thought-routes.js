@@ -1,8 +1,8 @@
-const router = require('express').Router();
-// const { } = require('../controllers/thought-controller');
+// const router = require('express').Router();
+// // const { } = require('../controllers/thought-controller');
 
-router.route('/')
+// router.route('/')
 
-router.route('/:thoughtId/reactions')
+// router.route('/:thoughtId/reactions')
 
-module.exports = router;
+// module.exports = router;

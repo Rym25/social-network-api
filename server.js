@@ -12,11 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(require('./routes'));
 
 // connect to mongo db
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/api', {
-    useFindAndModify: false,
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/');
 
 // logs mongo queries as they are executed
 mongoose.set('debug', true);
